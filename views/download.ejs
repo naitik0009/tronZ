@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+</head>
+<body>
+    <% if (locals.error) { %>
+    <h1><%= locals.error%></h1>
+        <% } else { %>
+
+            <p>Your file is ready to download</p>
+            <p>Link Will Be detached after 10 hrs</p>
+            <h4><%= filename %></h4>
+            <small><%= parseInt(fileSize) %>kb</small>
+            <a href="<%= download %>">download</a>
+            <% } %>
+    
+</body>
+</html>
